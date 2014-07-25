@@ -7,6 +7,7 @@ header {
 	font-weight: normal;
 	position: relative;
 	height: 110px;
+	margin-bottom: 4%;
 }
 
 .wrapper {
@@ -14,6 +15,19 @@ header {
 	padding-top: 3%;
 	width: 1060px;
 	margin: 0 auto;
+}
+
+.wrapper a {
+	text-decoration: none;
+	color: hsl(212, 54%, 37%);
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+.wrapper a:hover {
+	color: hsl(19, 88%, 54%);
 }
 
 .clearfix:before,
@@ -66,12 +80,30 @@ header {
 	font-family: "Futura W01 Bold",Arial,sans-serif;
 }
 
+.right a:last-child:hover {
+	border: 1px solid hsl(19, 88%, 54%);
+}
+
 ul, li {
 	list-style: none;
 	display: inline;
 }
 
-a {
-	text-decoration: none;
-	color: hsl(212, 54%, 37%);
+.hero {
+	background-image: url(../img/slideshow_city.jpg);
+	position: absolute;
+	width: 100%;
+}
+
+.hero-overlay {
+	background-color: hsla(19, 88%, 54%, 0.8);
+	position: relative;
+	height: 355px;
+	width: 1060px;
+	margin: 0 auto;
+	top: -40px;
+}
+
+.hero-container {
+	padding: 40px;
 }
