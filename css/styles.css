@@ -1,0 +1,77 @@
+/* Hannah Murray ; Percolate */
+
+header {
+	background-color: hsl(0, 100%, 100%);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	position: relative;
+	height: 110px;
+}
+
+.wrapper {
+	box-sizing: border-box;
+	padding-top: 3%;
+	width: 1060px;
+	margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.logo {
+	float: left;
+}
+
+.left {
+	float: left;
+	font-family: "Sentinel A", "Sentinel B", Georgia;
+	font-size: 18px;
+}
+
+.left a {
+	padding-left: 20px;
+}
+
+.left a:first-child {
+	padding-left: 0;
+}
+
+.right {
+	float: right;
+	width: 32.5%;
+}
+
+.right a {
+	padding-right: 25px;
+}
+
+.right a:last-child {
+	padding: 2% 3% 2% 3%;
+	border: 1px solid hsl(212, 54%, 37%);
+	text-transform: uppercase;
+	font-family: "Futura W01 Bold",Arial,sans-serif;
+}
+
+ul, li {
+	list-style: none;
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+	color: hsl(212, 54%, 37%);
+}
