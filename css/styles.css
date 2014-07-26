@@ -91,8 +91,9 @@ ul, li {
 
 .hero {
 	background-image: url(../img/slideshow_city.jpg);
-	position: absolute;
+	position: relative;
 	width: 100%;
+	margin-bottom: 60px;
 }
 
 .hero-overlay {
@@ -106,4 +107,26 @@ ul, li {
 
 .hero-container {
 	padding: 40px;
+}
+
+.hero-container h1 {
+	color: white;
+	font-family: "Sentinel A", "Sentinel B", Georgia;
+	font-weight: normal;
+	font-size: 60px;
+	bottom: 60px;
+	position: absolute;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1100px;
+}
+
+.container p {
+	font-family: "Sentinel A", "Sentinel B", georgia;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1.2;
+	color: hsl(228, 6%, 53%);
 }
