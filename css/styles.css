@@ -1,5 +1,9 @@
 /* Hannah Murray ; Percolate */
 
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
 body {
 	font-family: "Sentinel A", "Sentinel B", georgia;
 	font-size: 16px;
@@ -7,17 +11,16 @@ body {
 	color: hsl(228, 6%, 53%);
 }
 
-header {
-	background-color: hsl(0, 100%, 100%);
-	font-size: 13px;
-	font-weight: normal;
-	position: relative;
-	height: 110px;
-	margin-bottom: 4%;
-}
-
 h1 {
 	font-weight: normal;
+}
+
+h2 {
+	font-family: "Futura W01 Bold", Arial, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1;
+	color: black;
 }
 
 p {
@@ -36,10 +39,50 @@ hr {
 ul, li {
 	list-style: none;
 	display: inline;
+	vertical-align: middle;
 }
 
 img {
 	vertical-align: middle
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+/* header */
+
+.masthead {
+	background-color: hsl(0, 100%, 100%);
+	font-size: 13px;
+	font-weight: normal;
+	position: relative;
+	height: 110px;
+	margin-bottom: 4%;
 }
 
 .wrapper {
@@ -62,59 +105,43 @@ img {
 	color: hsl(19, 88%, 54%);
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-.logo {
-	float: left;
-}
-
-.left {
-	float: left;
+.nav-left {
 	font-size: 18px;
 }
 
-.left a {
+.nav-left a {
 	padding-left: 20px;
 }
 
-.left a:first-child {
+.nav-left a:first-child {
 	padding-left: 0;
 }
 
-.right {
-	float: right;
+.nav-right {
 	width: 32.5%;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.right a {
+.nav-right a {
 	padding-right: 25px;
 }
 
-.right a:last-child {
+.nav-right a:last-child {
 	padding: 2% 3% 2% 3%;
 	border: 1px solid hsl(212, 54%, 37%);
 	text-transform: uppercase;
 	font-family: "Futura W01 Bold",Arial,sans-serif;
 }
 
-.right a:last-child:hover {
+.nav-right a:last-child:hover {
 	border: 1px solid hsl(19, 88%, 54%);
 }
+
+.nav-right li:last-child {
+	vertical-align: baseline;
+}
+
+/* hero & client overlay */
 
 .hero {
 	background-image: url(../img/slideshow_city.jpg);
@@ -143,6 +170,8 @@ img {
 	font-size: 60px;
 }
 
+/* main section */
+
 .container {
 	margin: 0 auto;
 	width: 1060px;
@@ -159,4 +188,24 @@ img {
 
 .caption {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.results--callout {
+	clear:both;
+	padding-top: 60px;
+}
+
+.results--callout p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.voice {
+	margin-right: 80px;
+}
+
+.voice,
+.look {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 440px;
 }
