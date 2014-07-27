@@ -258,8 +258,10 @@ input[type=submit] {
 .hero--footer {
 	clear: both;
 	height: 340px;
-	position: static;
+	top: 60px;
 }
+
+/* hero */
 
 .hero--footer-overlay {
 	background: hsla(342, 58%, 41%, 0.8);
@@ -278,6 +280,8 @@ input[type=submit] {
 	color: white;
 }
 
+/* form section */
+
 .demo {
 	text-align: center;
 }
@@ -286,8 +290,11 @@ input[type=submit] {
 	margin-bottom: 40px;
 }
 
+/* percolate tools */
+
 .tools {
 	text-align: center;
+	margin-bottom: 60px;
 }
 
 .tools a {
@@ -321,11 +328,11 @@ input[type=submit] {
 }
 
 .icon-media:before {
-content: "\e01a";
+	content: "\e01a";
 }
 
 .icon-tools:before {
-content: "\e018";
+	content: "\e018";
 }
 
 .icon-32 {
@@ -334,4 +341,46 @@ content: "\e018";
 	font-family: "Percocons" !important;
 	font-size: 32px;
 	font-style: normal !important;
+}
+
+/* footer */
+
+footer {
+	margin-top: 40px;
+	background-color: hsl(19, 88%, 54%);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 32px;
+}
+
+footer .container {
+	padding-top: 35px;
+	padding-bottom: 90px;
+}
+
+footer nav {
+	width: 610px;
+}
+
+footer a {
+	color: white;
+	margin-right: 3%;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+footer a:hover {
+	color: hsl(212, 54%, 37%);
+}
+
+footer a:last-child {
+	margin-right: 0;
+	margin-left: 3%;
+}
+
+.copy {
+	color: hsl(18, 85%, 39%);
 }
