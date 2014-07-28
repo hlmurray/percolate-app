@@ -6,7 +6,7 @@
 
 body {
 	font-family: "Sentinel A", "Sentinel B", georgia;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 24px;
 	color: hsl(228, 6%, 53%);
 }
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
 	font-family: "Futura W01 Bold", Arial, sans-serif;
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: normal;
 	line-height: 1;
 	color: black;
@@ -29,7 +29,7 @@ h2 {
 
 h3 {
 	font-family: "Futura W01 Bold", Arial, sans-serif;
-	font-size: 20px;
+	font-size: 1.25em;
 	font-weight: normal;
 	line-height: 1;
 	color: hsl(19, 88%, 54%);
@@ -38,7 +38,7 @@ h3 {
 
 p {
 	color: hsl(228, 6%, 53%);
-	font-size: 24px;
+	font-size: 1.5em;
 	font-weight: normal;
 	line-height: 1.2;
 }
@@ -53,6 +53,7 @@ ul, li {
 	list-style: none;
 	display: inline;
 	vertical-align: middle;
+	margin: 0;
 }
 
 img {
@@ -66,7 +67,7 @@ form {
 input[type=text],
 input[type=email],
 input[type=submit] {
-	font-size: 13px;
+	font-size: .813em;
 	padding: 6px 12px;
 	outline: 0;
 }
@@ -119,7 +120,7 @@ input[type=submit] {
 
 .masthead {
 	background-color: hsl(0, 100%, 100%);
-	font-size: 13px;
+	font-size: .813em;
 	font-weight: normal;
 	position: relative;
 	height: 110px;
@@ -146,11 +147,11 @@ input[type=submit] {
 }
 
 .nav-left {
-	font-size: 18px;
+	font-size: 1.375em;
 }
 
 .nav-left a {
-	padding-left: 20px;
+	padding-left: 4%;
 }
 
 .nav-left a:first-child {
@@ -163,7 +164,7 @@ input[type=submit] {
 }
 
 .nav-right a {
-	padding-right: 25px;
+	padding-right: 7%;
 }
 
 .nav-right a:last-child {
@@ -181,6 +182,29 @@ input[type=submit] {
 	vertical-align: baseline;
 }
 
+.navbar-wrapper {
+	display: none;
+	float: right;
+	padding: 25px;
+	cursor: pointer;
+}
+
+.navbar {
+	display: block;
+	background-color: #2b5b91;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+
+.navbar:first-child {
+	margin-bottom: 4px;
+}
+
+.navbar:last-child {
+	margin-top: 4px;
+}
+
 /* hero & client overlay */
 
 .hero,
@@ -188,7 +212,7 @@ input[type=submit] {
 	background-image: url(../img/slideshow_city.jpg);
 	position: relative;
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 4%;
 }
 
 .hero-overlay,
@@ -234,17 +258,12 @@ input[type=submit] {
 
 .results--callout {
 	clear:both;
-	padding-top: 60px;
+	padding-top: 5%;
 }
 
 .results--callout p {
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 24px;
-}
-
-.voice,
-.effective {
-	margin-right: 80px;
 }
 
 .voice,
@@ -284,10 +303,11 @@ input[type=submit] {
 
 .demo {
 	text-align: center;
+	margin-top: 4%;
 }
 
 .demo p {
-	margin-bottom: 40px;
+	margin-bottom: 4%;
 }
 
 /* percolate tools */
@@ -304,7 +324,7 @@ input[type=submit] {
 .tools p {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: hsl(228, 6%, 53%);
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 24px;
 }
 
@@ -335,6 +355,7 @@ input[type=submit] {
 	content: "\e018";
 }
 
+.icon-24,
 .icon-32 {
 	display: inline-block;
 	vertical-align: sub;
@@ -346,17 +367,21 @@ input[type=submit] {
 /* footer */
 
 footer {
-	margin-top: 40px;
+	margin-top: 4%;
 	background-color: hsl(19, 88%, 54%);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: .813em;
 	font-weight: normal;
 	line-height: 32px;
 }
 
 footer .container {
-	padding-top: 35px;
-	padding-bottom: 90px;
+	padding-top: 3%;
+	padding-bottom: 7%;
+}
+
+footer img {
+	display: block;
 }
 
 footer nav {
@@ -365,7 +390,7 @@ footer nav {
 
 footer a {
 	color: white;
-	margin-right: 3%;
+	margin-right: 2%;
 	-webkit-transition: all 0.25s ease-in-out;
 	   -moz-transition: all 0.25s ease-in-out;
 		 -o-transition: all 0.25s ease-in-out;
@@ -376,30 +401,177 @@ footer a:hover {
 	color: hsl(212, 54%, 37%);
 }
 
-footer a:last-child {
-	margin-right: 0;
-	margin-left: 3%;
+.icon-24 {
+	display: none;
+	font-size: 24px;
+}
+
+.icon-solid-drip:before {
+	content: "\e00f";
 }
 
 .copy {
 	color: hsl(18, 85%, 39%);
+	margin-right: 2%;
 }
 
 /* ==========================================================================
    Media queries
    ========================================================================== */
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+@media (min-width : 320px) and (max-width : 899px) {
 	ul, li {
 		display: block;
+		padding: 0;
+		margin: 0;
 	}
+
+	li {
+		padding-bottom: 2.5%;
+	}
+
+	.masthead,
+	.hero--footer-overlay {
+		height: 100%;
+	}
+
 	.logo {
+		padding: 4%;
+	}
+
+	.wrapper,
+	.hero-overlay,
+	.hero--footer-overlay,
+	.container,
+	.voice,
+	.voice img,
+	.look,
+	.look img,
+	.effective,
+	.effective img,
+	.efficient,
+	.right {
+		width: 100%;
+	}
+
+	.hero {
+		margin-bottom: 10%;
+	}
+
+	.hero-overlay,
+	.hero--footer-overlay {
+		top: 0;
+	}
+
+	.hero-container h1 {
+		font-size: 55px;
+		line-height: .75em;
+		bottom: 30px;
+	}
+
+	.nav-left,
+	.nav-right {
+		display: none;
+	}
+
+	.navbar-wrapper {
+		display: block;
+	}
+
+	.container {
+		text-align: center;
+	}
+
+	.demo {
+		margin-top: 20%;
+	}
+
+	input[type=text],
+	input[type=email],
+	input[type=submit] {
+		display: block;
+		margin: 1% auto 0 auto;
+	}
+
+	footer {
+		margin-top: 0;
+	}
+
+	footer .container {
+		text-align: center;
+		padding-bottom: 6%;
+		padding-top: 8%;
+	}
+
+	.icon-24 {
+		display: inline;
+	}
+
+	footer img {
+		display: none;
+	}
+
+	footer .left,
+	footer .right {
 		float: none;
+	}
+
+	footer .right {
+		line-height: normal;
+	}
+
+	footer a:last-child {
+		margin-left: 0;
+	}
+
+	footer a {
+		margin-bottom: 1%;
+	}
+
+	.copy {
+		margin-right: 0;
 	}
 }
 
-@media (max-width: 1099px) and (min-width: 718px) {
-	.wrapper {
+@media (min-width: 320px) and (max-width: 1039px) {
+	.plan,
+	.source,
+	.create {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 440px) and (max-width: 1059px) {
+	.voice img,
+	.look img,
+	.effective img {
+		width: auto;
+	}
+
+	.demo {
+		margin-top: 12%;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1059px) {
+	.wrapper,
+	.container,
+	.hero-overlay,
+	.hero--footer-overlay {
 		width: 100%;
+	}
+	.masthead {
+		font-size: .688em;
+	}
+	.nav-left {
+		font-size: 1.063em;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1150px) {
+	.container {
+		margin-left: 2%;
 	}
 }

@@ -35,6 +35,11 @@
 						<a href="#"><li>Request a Demo</li></a>
 					</ul>
 				</nav>
+				<div class="navbar-wrapper" onclick="toggleNav()">
+						<span class="navbar"></span>
+						<span class="navbar"></span>
+						<span class="navbar"></span>
+				</div>
 			</section>
 		</header>
 		<main>
@@ -65,7 +70,7 @@
 						<p>I didn't blame anyone for the loss of my legs, some chinaman in Korea took them from me but I went out and achieved anyway. Dolor sit amet, consectetur adipiscing elit praesent ac magna justo. Yes sir. It is our most modestly priced receptacle.</p>
 						<img src="img/voice.jpg" alt="Vimeo Voice">
 					</article>
-					<article class="look left">
+					<article class="look right">
 						<header>
 							<h2>Look</h2>
 						</header>
@@ -81,7 +86,7 @@
 						<p>I know my rights. Ac lorem aliquam placerat posuere neque, at dignissim magna.</p>
 						<img src="img/effective.png" alt="Vimeo Effective">
 					</article>
-					<article class="efficient left">
+					<article class="efficient right">
 						<header>
 							<h2>Efficient</h2>
 						</header>
@@ -105,12 +110,14 @@
 						<h3>See Percolate in Action</h3>
 					</header>
 					<p>Learn how Percolate’s Content Marketing platform can help your brand.</p>
-					<form>
-						<input type="text" placeholder="First Name">
-						<input type="text" placeholder="Last Name">
-						<input type="email" placeholder="Company Email">
-						<input type="submit" value="Request a Demo">
-					</form>
+					<div ng-app="myApp">
+						<form method="post" action="php/send.php" ng-controller="FormCtrl as form">
+							<input type="text"  ng-model="form.firstname" placeholder="First Name" required>
+							<input type="text"  ng-model="form.lastname" placeholder="Last Name" required>
+							<input type="email" ng-model="form.emailaddress" placeholder="Company Email" required>
+							<input type="submit" ng-click="Submit" value="Request a Demo">
+						</form>
+					</div>
 				</div>
 				<div class="tools">
 					<article class="plan left">
@@ -141,16 +148,20 @@
 					<img src="img/logo-white.png" alt="Percolate white logo" class="left">
 					<nav class="right">
 						<ul>
-							<a href="#"><li>Contact</li></a>
-							<a href="#"><li>Jobs</li></a>
-							<a href="#"><li>Blog</li></a>
-							<a href="#"><li>Privacy</li></a>
+							<li><a href="#"><icon class="icon-24 icon-solid-drip"></icon></a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Jobs</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Privacy</a></li>
 							<li class="copy">&copy; Percolate Industries, Inc.</li>
-							<a href="#"><li>Made in NYC, SF, ATX, & LDN</li></a>
+							<li><a href="#">Made in NYC, SF, ATX, & LDN</a></li>
 						</ul>
 					</nav>
 				</section>
 			</footer>
 		</main>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
