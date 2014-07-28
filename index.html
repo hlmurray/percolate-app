@@ -112,9 +112,9 @@
 					<p>Learn how Percolate’s Content Marketing platform can help your brand.</p>
 					<div ng-app="myApp">
 						<form method="post" action="php/send.php" ng-controller="FormCtrl as form">
-							<input type="text"  ng-model="form.firstname" placeholder="First Name" required>
-							<input type="text"  ng-model="form.lastname" placeholder="Last Name" required>
-							<input type="email" ng-model="form.emailaddress" placeholder="Company Email" required>
+							<input type="text"  name="firstname" ng-model="form.firstname" placeholder="First Name" required>
+							<input type="text"  name="lastname" ng-model="form.lastname" placeholder="Last Name" required>
+							<input type="email" name="email" ng-model="form.emailaddress" placeholder="Company Email" required>
 							<input type="submit" ng-click="Submit" value="Request a Demo">
 						</form>
 					</div>
