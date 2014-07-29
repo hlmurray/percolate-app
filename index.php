@@ -110,8 +110,10 @@
 						<h3>See Percolate in Action</h3>
 					</header>
 					<p>Learn how Percolate’s Content Marketing platform can help your brand.</p>
+					<?php include 'php/send.php';
+					?>
 					<div ng-app="myApp">
-						<form method="post" action="php/send.php" ng-controller="FormCtrl as form">
+						<form method="post" action="" ng-controller="FormCtrl as form">
 							<input type="text"  name="firstname" ng-model="form.firstname" placeholder="First Name" required>
 							<input type="text"  name="lastname" ng-model="form.lastname" placeholder="Last Name" required>
 							<input type="email" name="email" ng-model="form.emailaddress" placeholder="Company Email" required>
