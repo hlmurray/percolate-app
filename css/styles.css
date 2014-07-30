@@ -181,6 +181,10 @@ input[type=submit]:hover {
 	padding-right: 7%;
 }
 
+.nav-right a:last-child {
+	padding-right: 0;
+}
+
 .nav-right button {
 	background-color: white;
 	color: hsl(212, 54%, 37%);
