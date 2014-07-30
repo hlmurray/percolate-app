@@ -76,7 +76,10 @@ input[type=text],
 input[type=email] {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-right: 1%;
-	border-radius: none;
+	-webkit-border-radius: 0; 
+	   -moz-border-radius: 0;
+	     -o-border-radius: 0; 
+		 	border-radius: 0;
 	border: 1px solid hsl(216, 4%, 77%);
 }
 
@@ -85,6 +88,16 @@ input[type=submit] {
 	color: hsl(19, 88%, 54%);
 	font-family: "Futura W01 Bold", Arial, sans-serif;
 	text-transform: uppercase;
+	border: 1px solid hsl(19, 88%, 54%);
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+}
+
+input[type=submit]:hover {
+	background-color: hsl(19, 88%, 54%);
+	color: white;
 	border: 1px solid hsl(19, 88%, 54%);
 }
 
@@ -148,6 +161,7 @@ input[type=submit] {
 
 .nav-left {
 	font-size: 1.375em;
+	width: 40%;
 }
 
 .nav-left a {
@@ -167,15 +181,23 @@ input[type=submit] {
 	padding-right: 7%;
 }
 
-.nav-right a:last-child {
+.nav-right button {
+	background-color: white;
+	color: hsl(212, 54%, 37%);
 	padding: 2% 3% 2% 3%;
 	border: 1px solid hsl(212, 54%, 37%);
 	text-transform: uppercase;
 	font-family: "Futura W01 Bold",Arial,sans-serif;
+	-webkit-transition: all 0.25s ease-in-out;
+	   -moz-transition: all 0.25s ease-in-out;
+		 -o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 }
 
-.nav-right a:last-child:hover {
-	border: 1px solid hsl(19, 88%, 54%);
+.nav-right button:hover {
+	border: 1px solid hsl(212, 54%, 37%);
+	color: white;
+	background-color: hsl(212, 54%, 37%);
 }
 
 .nav-right li:last-child {
@@ -184,8 +206,7 @@ input[type=submit] {
 
 .navbar-wrapper {
 	display: none;
-	float: right;
-	padding: 25px;
+	padding: 5.5%;
 	cursor: pointer;
 }
 
@@ -194,7 +215,10 @@ input[type=submit] {
 	background-color: #2b5b91;
 	width: 22px;
 	height: 2px;
-	border-radius: 1px;
+	-webkit-border-radius: 1px; 
+	   -moz-border-radius: 1px;
+	     -o-border-radius: 1px; 
+		 	border-radius: 1px;
 }
 
 .navbar:first-child {
@@ -310,6 +334,34 @@ input[type=submit] {
 	margin-bottom: 4%;
 }
 
+/* javascript validation */
+
+input.parsley-success {
+	color: #468847;
+	background-color: #DFF0D8;
+	border: 1px solid #D6E9C6;
+}
+
+input.parsley-error {
+	color: #B94A48;
+	background-color: #F2DEDE;
+	border: 1px solid #EED3D7;
+}
+
+input.parsley-error::-webkit-input-placeholder { /* WebKit browsers */
+	color:#B94A48 !important;
+}
+input.parsley-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:#B94A48 !important;
+}
+input.parsley-error:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:#B94A48 !important;
+}
+
+ul.parsley-errors-list {
+	display: none;
+}
+
 /* percolate tools */
 
 .tools {
@@ -420,7 +472,7 @@ footer a:hover {
    ========================================================================== */
 
 
-@media (min-width : 320px) and (max-width : 899px) {
+@media (min-width : 320px) and (max-width : 993px) {
 	ul, li {
 		display: block;
 		padding: 0;
@@ -436,14 +488,52 @@ footer a:hover {
 		height: 100%;
 	}
 
+	.wrapper {
+		padding-top: 0;
+	}
+
 	.logo {
 		padding: 4%;
+		text-align: center;
+	}
+
+	.logo,
+	.nav-left,
+	.nav-right,
+	footer .left,
+	footer .right {
+		float: none;
+		clear: both;
+	}
+
+	.nav-toggle {
+		display: none;
+		text-align: center;
+	}
+
+	.nav-left,
+	.nav-right {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 1.1em;
+	}
+
+	.nav-left a,
+	.nav-right a {
+		padding: 0;
+	}
+
+	.navbar-wrapper {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 
 	.wrapper,
+	.nav-left,
+	.nav-right,
 	.hero-overlay,
 	.hero--footer-overlay,
-	.container,
 	.voice,
 	.voice img,
 	.look,
@@ -451,7 +541,7 @@ footer a:hover {
 	.effective,
 	.effective img,
 	.efficient,
-	.right {
+	footer .right {
 		width: 100%;
 	}
 
@@ -470,17 +560,10 @@ footer a:hover {
 		bottom: 30px;
 	}
 
-	.nav-left,
-	.nav-right {
-		display: none;
-	}
-
-	.navbar-wrapper {
-		display: block;
-	}
-
 	.container {
 		text-align: center;
+		margin-left: 5%;
+		width: 90%;
 	}
 
 	.demo {
@@ -512,11 +595,6 @@ footer a:hover {
 		display: none;
 	}
 
-	footer .left,
-	footer .right {
-		float: none;
-	}
-
 	footer .right {
 		line-height: normal;
 	}
@@ -534,7 +612,7 @@ footer a:hover {
 	}
 }
 
-@media (min-width: 320px) and (max-width: 1039px) {
+@media (min-width: 320px) and (max-width: 1149px) {
 	.plan,
 	.source,
 	.create {
@@ -557,7 +635,6 @@ footer a:hover {
 
 @media (min-width: 900px) and (max-width: 1059px) {
 	.wrapper,
-	.container,
 	.hero-overlay,
 	.hero--footer-overlay {
 		width: 100%;
@@ -572,6 +649,7 @@ footer a:hover {
 
 @media (min-width: 900px) and (max-width: 1150px) {
 	.container {
-		margin-left: 2%;
+		margin-left: 5%;
+		width: 90%;
 	}
 }

@@ -1,15 +1,16 @@
 <!-- Hannah Murray ; Percolate -->
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="">
 	<head>
 		<title>Vimeo Social Content Creation Case Study | Client Success Stories | Percolate </title>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="description" content="Percolate is your system of record for marketing">
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/fonts.css">
-		<link rel="stylesheet" href="http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/all.css">
+	    <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/all.css">
 		<link rel="shortcut icon" href="http://percolate.com/favicon.ico">
 
 	</head>
@@ -19,23 +20,25 @@
 				<div class="logo left clearfix">
 					<img src="img/logo.png" alt="percolate logo">
 				</div>
-				<nav class="nav-left left">
-					<ul>
-						<a href="#"><li>Platform</li></a>
-						<a href="#"><li>Clients</li></a>
-						<a href="#"><li>Company</li></a>
-						<a href="#"><li>Insights</li></a>
-						<a href="#"><li>Blog</li></a>
-					</ul>
-				</nav>
-				<nav class="nav-right right">
-					<ul>
-						<a href="#"><li>We're Hiring!</li></a>
-						<a href="#"><li>Login</li></a>
-						<a href="#"><li>Request a Demo</li></a>
-					</ul>
-				</nav>
-				<div class="navbar-wrapper" onclick="toggleNav()">
+				<div class="nav-toggle">
+					<nav class="nav-left left">
+						<ul>
+							<a href="#"><li>Platform</li></a>
+							<a href="#"><li>Clients</li></a>
+							<a href="#"><li>Company</li></a>
+							<a href="#"><li>Insights</li></a>
+							<a href="#"><li>Blog</li></a>
+						</ul>
+					</nav>
+					<nav class="nav-right right">
+						<ul>
+							<a href="#"><li>We're Hiring!</li></a>
+							<a href="#"><li>Login</li></a>
+							<a href="#"><li><button class="">Request a Demo</button></li></a>
+						</ul>
+					</nav>
+				</div>
+				<div class="navbar-wrapper">
 						<span class="navbar"></span>
 						<span class="navbar"></span>
 						<span class="navbar"></span>
@@ -46,7 +49,7 @@
 			<section class="hero clearfix">
 				<div class="hero-overlay">
 					<div class="hero-container">
-						<img src="img/vimeo-white.svg" alt="Venmo white logo" width="100">
+						<img src="img/vimeo-white.svg" alt="Venmo white logo" width="100" height="29">
 						<h1>Creating videos. Sharing videos.</h1>
 					</div>
 				</div>
@@ -59,7 +62,7 @@
 						<h1>Results</h1>
 					</header>
 					<p>“This is quite a pad you got here, man. Completely unspoiled. Eget risus nulla nullam vel nisi enim, vel auctor ante morbi id urna.”</p>
-					<img src="img/gray.png" alt="Vimeo Placeholder">
+					<img src="img/vimeo-js.jpg" alt="Vimeo worker">
 					<span class="caption">John Smith — Marketing Manager, Vimeo</span>
 				</div>
 				<div class="results--callout">
@@ -99,7 +102,7 @@
 				<div class="hero--footer-overlay">
 					<div class="hero--footer-container">
 						<p>"I don't know about you, but I take comfort in that. It's good knowin' he's out there, the Dude, takin' her easy for all us sinners."</p>
-						<img src="img/gray.png" alt="Vimeo Placeholder">
+						<img src="img/vimeo-js.jpg" alt="Vimeo Placeholder">
 						<span class="caption">John Smith — Marketing Manager, Vimeo</span>
 					</div>
 				</div>
@@ -107,17 +110,16 @@
 			<section class="container clearfix">
 				<div class="demo">
 					<header>
-						<h3>See Percolate in Action</h3>
+						<h3 id="see-in-action">See Percolate in Action</h3>
 					</header>
 					<p>Learn how Percolate’s Content Marketing platform can help your brand.</p>
-					<div ng-app="myApp">
-						<form method="post" action="php/send.php" ng-controller="FormCtrl as form" target="_blank">
-							<input type="text"  name="firstname" ng-model="form.firstname" placeholder="First Name" required>
-							<input type="text"  name="lastname" ng-model="form.lastname" placeholder="Last Name" required>
-							<input type="email" name="email" ng-model="form.emailaddress" placeholder="Company Email" required>
-							<input type="submit" ng-click="Submit" value="Request a Demo">
+						<?php include "php/send.php" ?>
+						<form method="post" action="index.php#see-in-action" data-parsley-validate>
+							<input type="text"  name="firstname" placeholder="First Name" required>
+							<input type="text"  name="lastname" placeholder="Last Name" required>
+							<input type="email" name="email" placeholder="Company Email" required>
+							<input type="submit" value="Request a Demo">
 						</form>
-					</div>
 				</div>
 				<div class="tools">
 					<article class="plan left">
@@ -160,8 +162,8 @@
 				</section>
 			</footer>
 		</main>
-		<script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript" src="js/angular.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://parsleyjs.org/dist/parsley.min.js"></script>
+		<script src="js/index.js" type="text/javascript"></script>
 	</body>
 </html>

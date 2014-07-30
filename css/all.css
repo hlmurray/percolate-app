@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Percocons";
+    src:url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/percocons/perco-cons.eot");
+    src:url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/percocons/perco-cons.eot?#iefix") format("embedded-opentype"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/percocons/perco-cons.ttf") format("truetype"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/percocons/perco-cons.svg#perco-cons") format("svg"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/percocons/perco-cons.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:"Futura W01 Bold";
+    src:url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/futura/3b3d00eb-6d89-47ec-83ee-48276a47ad94.eot?#iefix");
+    src:url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/futura/3b3d00eb-6d89-47ec-83ee-48276a47ad94.eot?#iefix") format("eot"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/futura/2a65cbfc-5071-4b4d-bfc2-e052bb091ee2.woff") format("woff"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/futura/812f781d-aa66-47a1-b6a2-7941effc1527.ttf") format("truetype"),
+        url("http://percolate.com/cdn/font/4216a309cc48aef13a5f413d0b0d25f7/futura/2a371030-ff67-40ac-8307-082c1fccf151.svg#2a371030-ff67-40ac-8307-082c1fccf151") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
