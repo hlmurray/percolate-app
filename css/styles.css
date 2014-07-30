@@ -195,9 +195,9 @@ input[type=submit]:hover {
 }
 
 .nav-right button:hover {
-	border: 1px solid hsl(212, 54%, 37%);
+	border: 1px solid hsl(19, 88%, 54%);
 	color: white;
-	background-color: hsl(212, 54%, 37%);
+	background-color: hsl(19, 88%, 54%);
 }
 
 .navbar-wrapper {
