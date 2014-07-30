@@ -200,10 +200,6 @@ input[type=submit]:hover {
 	background-color: hsl(212, 54%, 37%);
 }
 
-.nav-right li:last-child {
-	vertical-align: baseline;
-}
-
 .navbar-wrapper {
 	display: none;
 	padding: 5.5%;
